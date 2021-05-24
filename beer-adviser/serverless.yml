@@ -1,0 +1,29 @@
+org: mmojze
+app: findtwobeers
+service: findtwobeers
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+  stage: v1
+  region: us-east-1
+
+functions:
+  hello:
+    handler: handler.findtwobeers
+    events: 
+      - http:
+          method: post
+          path: /findTwoBeers
+
+package:
+  exclude:
+     - ./**
+     - '!node_modules/**'
+     - node_modules/
+  include:
+    - beer-adviser/**
+    - handler.js
+    - package.json

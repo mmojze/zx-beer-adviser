@@ -1,0 +1,21 @@
+{
+  "name": "beer-adviser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/unit",
+    "deploy": "serverless deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "serverless-ignore": "^0.1.6"
+  }
+}
